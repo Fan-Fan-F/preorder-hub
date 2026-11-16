@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>预售中心 · Pre-order Hub</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="wrap">
+  <header class="head">
+    <h1>🚀 预售中心</h1>
+    <p>定金膨胀 → 付尾款 → 发货。演示中阶段以分钟计，真实场景按天</p>
+  </header>
+
+  <div class="phase-bar card">
+    <div class="phase-item" data-phase="deposit">
+      <b>① 定金期</b><small>付定金锁价，定金膨胀</small>
+    </div>
+    <div class="phase-arrow">→</div>
+    <div class="phase-item" data-phase="final">
+      <b>② 尾款期</b><small>补尾款，定金抵扣翻倍</small>
+    </div>
+    <div class="phase-arrow">→</div>
+    <div class="phase-item" data-phase="ship">
+      <b>③ 发货</b><small>按付尾款顺序发出</small>
+    </div>
+    <p class="phase-note" id="phaseNote"></p>
+  </div>
+
+  <div id="productList" class="prod-list"></div>
+
+  <section class="card">
+    <h2>我的预售订单</h2>
+    <div id="myOrders"></div>
+  </section>
+</main>
+
+<div id="toast" class="toast" hidden></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
